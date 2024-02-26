@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { work_sans } from "./ui/fonts";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Coplan",
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${work_sans.className} antialiased`}>{children}</body>
+    <html lang="en" className="">
+      <body className={`${work_sans.className} antialiased`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
