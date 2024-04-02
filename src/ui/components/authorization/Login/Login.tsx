@@ -1,16 +1,18 @@
 import { Button, Input } from "@nextui-org/react";
 import Image from "next/image";
-import PasswordInput from "../components/PasswordInput/PasswordInput";
+import { PasswordInput } from "../../forms/PasswordInput/PasswordInput";
 
 export default function Login() {
   return (
     <>
-      <div className="flex flex-col gap-8">
-        <span className="text-3xl font-medium">Sign in</span>
+      <div className="flex flex-col gap-7">
+        <span className="text-2xl lg:text-3xl font-medium text-center md:text-start">
+          Sign In
+        </span>
         <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-5 w-[377px]">
+          <div className="flex flex-col gap-5 w-[320px] md:w-[377px]">
             <Input isClearable radius="sm" type="email" placeholder="Email" />
-            <PasswordInput />
+            <PasswordInput placeholder="Password" />
           </div>
           <span className="text-right text-sm text-gray-400">
             Forgot password?
@@ -28,8 +30,13 @@ export default function Login() {
           or continue with
         </span>
         <div className="flex justify-center gap-5">
-          <Image src="/facebook.svg" width={40} height={43} alt="Facebook" />
-          <Image src="/google.svg" width={40} height={42} alt="Google" />
+          <Image
+            src="/social/facebook.svg"
+            width={40}
+            height={43}
+            alt="Facebook"
+          />
+          <Image src="/social/google.svg" width={40} height={42} alt="Google" />
         </div>
       </div>
     </>

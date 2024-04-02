@@ -5,15 +5,19 @@ import { EyeSlashFilledIcon } from "./svg/EyeSlashFilledIcon";
 import { EyeFilledIcon } from "./svg/EyeFilledIcon";
 import { useState } from "react";
 
-export default function PasswordInput() {
+interface PasswordInputProps {
+  placeholder: string;
+}
+
+export const PasswordInput: React.FC<PasswordInputProps> = (props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
     <Input
-      className="w-[377px]"
-      placeholder="Password"
+      className="w-[320px] md:w-[377px]"
+      placeholder={props.placeholder}
       radius="sm"
       endContent={
         <button
@@ -31,4 +35,4 @@ export default function PasswordInput() {
       type={isVisible ? "text" : "password"}
     />
   );
-}
+};

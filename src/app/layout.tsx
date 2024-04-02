@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { work_sans } from "./ui/fonts";
+import { work_sans } from "../ui/fonts";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
