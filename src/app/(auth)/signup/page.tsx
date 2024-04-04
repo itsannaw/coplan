@@ -12,16 +12,14 @@ export default function SignUp() {
           </div>
           <div className="flex flex-col gap-2 text-base">
             <span>If you already an account</span>
-            <span>You can Login here !</span>
+            <span>You can Login here!</span>
             <Image
-              src="/saly.svg"
-              width={495}
-              height={440}
-              priority={false}
-              loading="lazy"
-              className="absolute top-32 left-20 max-w-[425px]"
-              alt="Saly"
-            />
+              src="/saly.png"
+              width={1540}
+              height={1540}
+              priority={true}
+              className="max-xl:hidden absolute top-36 left-24 max-w-[385px] -z-10"
+              alt="Saly" />
           </div>
         </div>
         <div className="flex">
