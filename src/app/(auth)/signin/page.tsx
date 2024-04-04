@@ -6,7 +6,6 @@ export default function SignIn() {
   return (
     <main className="px-5 md:px-10 py-8">
       {/* need navbar */}
-      <h1 className="text-xl font-semibold">Coplan</h1>
       <div className="flex flex-col md:flex-row max-w-[377px] md:max-w-[1440px] mx-auto justify-center mt-12 gap-10 md:gap-28 lg:gap-72">
         <div className="relative flex flex-col gap-4 lg:gap-8">
           <div className="flex flex-col gap-2 lg:gap-4">

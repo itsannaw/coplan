@@ -3,8 +3,7 @@ import Image from "next/image";
 
 export default function SignUp() {
   return (
-    <main className="px-10 py-8">
-      <h1 className="text-xl font-semibold">Coplan</h1>
+    <main className="px-10 py-2">
       <div className=" flex justify-center mt-12 gap-72">
         <div className="relative flex flex-col gap-8">
           <div className="flex flex-col gap-4">
