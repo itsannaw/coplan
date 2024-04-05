@@ -1,3 +1,4 @@
-import { UserSchema } from "./auth/userSchema";
+import { signupSchema } from "./auth/signupSchema";
+import { signinSchema } from "./auth/signinSchema";
 
-export default UserSchema;
+export { signupSchema, signinSchema };

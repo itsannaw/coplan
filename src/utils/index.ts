@@ -1,3 +1,3 @@
-import UserSchema from "./validation";
+import { signupSchema, signinSchema } from "./validation";
 
-export default UserSchema;
+export { signupSchema, signinSchema };

@@ -1,7 +1,7 @@
-import { FormSignUpData } from "@/src/types";
+import { FormUserData } from "@/src/types";
 import { ZodType, z } from "zod";
 
-export const UserSchema: ZodType<FormSignUpData> = z
+export const signupSchema: ZodType<FormUserData> = z
   .object({
     username: z
       .string()
@@ -15,8 +15,8 @@ export const UserSchema: ZodType<FormSignUpData> = z
       .max(20, { message: "Password is too long" }),
     confirmPassword: z.string(),
   })
-  .refine(({ password, confirmPassword }) => password === confirmPassword, {
-    message: "Password doesn't match",
-    path: ["confirm_password"],
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
   });
 

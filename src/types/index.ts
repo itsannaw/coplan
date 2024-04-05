@@ -1,23 +1,23 @@
 import { FieldError, UseFormRegister } from "react-hook-form";
 
-//signup
+//user
 
-export type FormSignUpData = {
+export type FormUserData = {
     email: string;
     username: string;
     password: string;
     confirmPassword: string;
   };
 
-  export type FormSignUpFieldProps = {
+  export type FormUserFieldProps = {
     placeholder: string;
-    name: ValidSignUpFieldNames;
-    register: UseFormRegister<FormSignUpData>;
+    name: ValidUserFieldNames;
+    register: UseFormRegister<FormUserData>;
     error: FieldError | undefined;
     valueAsNumber?: boolean;
   };
 
-  export type ValidSignUpFieldNames =
+  export type ValidUserFieldNames =
   | "email"
   | "username"
   | "password"

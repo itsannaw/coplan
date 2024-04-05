@@ -2,13 +2,13 @@
 import { Input } from "@nextui-org/react";
 import { useState } from "react";
 import { EyeFilledIcon, EyeSlashFilledIcon } from "./svg";
-import { FormSignUpFieldProps } from "@/src/types";
+import { FormUserFieldProps } from "@/src/types";
 
 interface PasswordInputProps {
   placeholder: string;
 }
 
-export const PasswordInput: React.FC<FormSignUpFieldProps> = ({
+export const PasswordInput: React.FC<FormUserFieldProps> = ({
   placeholder,
   name,
   register,

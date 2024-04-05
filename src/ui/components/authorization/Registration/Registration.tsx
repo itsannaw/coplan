@@ -2,13 +2,10 @@
 import { Button, Input } from "@nextui-org/react";
 import Image from "next/image";
 import { PasswordInput } from "../../forms/PasswordInput/PasswordInput";
-import formSignup from "@/src/utils";
-import { z } from "zod";
-import { SubmitHandler, useForm } from "react-hook-form";
-
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormSignUpData } from "@/src/types";
-import UserSchema from "@/src/utils";
+import { FormUserData } from "@/src/types";
+import { signupSchema } from "@/src/utils";
 
 export default function Registration() {
   const {
@@ -16,11 +13,11 @@ export default function Registration() {
     handleSubmit,
     formState: { errors },
     setError,
-  } = useForm<FormSignUpData>({
-    resolver: zodResolver(UserSchema), // Apply the zodResolver
+  } = useForm<FormUserData>({
+    resolver: zodResolver(signupSchema),
   });
 
-  const onSubmit = (data: FormSignUpData) => {
+  const onSubmit = (data: FormUserData) => {
     console.log(data);
   };
 
